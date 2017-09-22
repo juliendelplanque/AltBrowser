@@ -27,7 +27,7 @@ buildChangeList
 						className: rgMethod theNonMetaClassName
 						isMeta: rgMethod isMetaSide);
 				nextPutAll:
-					((((repository
+					([((((repository
 						gitVersionsForDefinition: mcMethodDefinition
 						in: aMCWorkingCopy packageName)
 						collect: [ :commitID | 
@@ -38,7 +38,7 @@ buildChangeList
 								info: (allFileNames detect: [ :en | en commitID = commitID ]) info;
 								yourself) loadDefinitionFor: mcMethodDefinition ])
 						reject: [ :mcD | mcD isNil or: [ mcD isEmpty ] ])
-						collect: [ :e | e first ]) ])
+						collect: [ :e | e first ]) ] on: NotFound do: [ #() ])])
 		collectWithIndex: [ :c :i | 
 			| rg |
 			rg := c asRingDefinition.
