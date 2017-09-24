@@ -1,4 +1,4 @@
-tests
+tests-scan
 testScanAChariot
 	| scanner res |
 	scanner := AltTypeCheckScanner on: (ReadStream on: 'aChariot').

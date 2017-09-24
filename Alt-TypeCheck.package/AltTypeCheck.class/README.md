@@ -1,0 +1,1 @@
+I apply type guards on all methods, and can also remove them

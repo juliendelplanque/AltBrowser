@@ -1,4 +1,4 @@
-tests
+tests-scan
 testEmpty
 	| scanner |
 	scanner := AltTypeCheckScanner on: (ReadStream on: '').

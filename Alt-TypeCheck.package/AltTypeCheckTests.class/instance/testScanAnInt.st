@@ -1,4 +1,4 @@
-tests
+tests-scan
 testScanAnInt
 	| scanner res |
 	scanner := AltTypeCheckScanner on: (ReadStream on: 'anInt').

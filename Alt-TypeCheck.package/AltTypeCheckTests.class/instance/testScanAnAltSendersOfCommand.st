@@ -1,4 +1,4 @@
-tests
+tests-scan
 testScanAnAltSendersOfCommand
 	| scanner res |
 	scanner := AltTypeCheckScanner

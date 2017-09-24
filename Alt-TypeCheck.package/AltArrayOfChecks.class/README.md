@@ -1,0 +1,1 @@
+I combine multiple checks (one for each argument)

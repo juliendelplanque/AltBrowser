@@ -17,15 +17,15 @@ scan
 												ifFalse: [ ^ nil ]
 												ifTrue: [ self step.
 													current = $r
+														ifTrue: [ self step ]
 														ifFalse: [ ^ nil ] ] ] ] ] ] ].
 	current isUppercase
 		ifTrue: [ self token nextPut: current.
 			self step.
 			[ current isAlphaNumeric ]
 				whileTrue: [ current = $O
-						ifTrue: [ self tokenClass
-								ifNotNil: [ :aClass | 
-									type := AltObjectType on: aClass.
+						ifTrue: [ self tokenType
+								ifNotNil: [ :aType | 
 									self token nextPut: current.
 									self step.
 									current = $f
@@ -35,9 +35,8 @@ scan
 									self token nextPut: current ]
 								ifNil: [ self token nextPut: current ] ]
 						ifFalse: [ current isUppercase
-								ifTrue: [ self tokenClass
-										ifNotNil: [ :aClass | type := AltObjectType on: aClass ] ].
+								ifTrue: [ self tokenType ].
 							self token nextPut: current ].
 					self step ].
-			self tokenClass ifNotNil: [ :aClass | ^ AltObjectType on: aClass ] ].
+			self tokenType ].
 	^ type
