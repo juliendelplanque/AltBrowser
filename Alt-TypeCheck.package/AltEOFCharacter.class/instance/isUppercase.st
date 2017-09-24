@@ -1,0 +1,3 @@
+comparing
+isUppercase
+	^ false
