@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Alt-TypeCheck",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream",
+		"current",
+		"type",
+		"token"
+	],
+	"name" : "AltTypeCheckScanner",
+	"type" : "normal"
+}

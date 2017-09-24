@@ -1,0 +1,1 @@
+I represent an any type, that is answers true to anything not specified

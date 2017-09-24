@@ -1,0 +1,3 @@
+testing
+check: anObject
+	^ true

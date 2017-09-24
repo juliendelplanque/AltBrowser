@@ -1,0 +1,1 @@
+I represent a collection type: I have a reference class (or not) and a collection of items

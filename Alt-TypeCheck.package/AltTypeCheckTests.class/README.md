@@ -1,0 +1,1 @@
+I test the scanner and the typing logic and the way to add metalinks.

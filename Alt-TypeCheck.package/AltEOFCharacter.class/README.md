@@ -1,0 +1,1 @@
+I represent an end of input when scanning

@@ -1,0 +1,1 @@
+I represent an object type (a class).

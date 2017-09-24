@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltAbstractType",
+	"category" : "Alt-TypeCheck",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objectClass"
+	],
+	"name" : "AltObjectType",
+	"type" : "normal"
+}

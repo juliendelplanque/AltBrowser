@@ -1,0 +1,1 @@
+I represent an AND between two types expressions
