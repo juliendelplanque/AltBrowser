@@ -1,12 +1,12 @@
 tests-overall
-testOverallAClass
-	"Use the type check overall on the method"
+testOverallAPackage
+	"Use the type check overall on the package"
 
 	| method checker |
 	method := AltTypeCheckTests >> #compare:with:.
 	self deny: method ast hasMetalink.
 	[ checker := AltTypeCheck new.
-	checker applyOn: self class.
+	checker applyOn: self class package.
 	self
 		shouldnt: [ self compare: #($a $b) with: #(1 2) ]
 		raise: AssertionFailure.

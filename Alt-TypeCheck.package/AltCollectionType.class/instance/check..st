@@ -1,4 +1,4 @@
-testing
+accessing
 check: anObject
 	^ (collectionType check: anObject)
 		and: [ (anObject respondsTo: #allSatisfy:)

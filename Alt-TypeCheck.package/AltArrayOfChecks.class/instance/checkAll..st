@@ -1,4 +1,4 @@
-testing
+accessing
 checkAll: anArrayOfObject
 	checks
 		with: anArrayOfObject
