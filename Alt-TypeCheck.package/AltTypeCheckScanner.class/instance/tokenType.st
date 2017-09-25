@@ -8,6 +8,8 @@ tokenType
 				ifTrue: [ ^ type := AltObjectType on: Character ].
 			s = 'Int'
 				ifTrue: [ ^ type := AltObjectType on: Integer ].
+			s = 'Block'
+				ifTrue: [ ^ type := AltObjectType on: BlockClosure ].
 			s = 'Any'
 				ifTrue: [ ^ type := AltAnyType new ].
 			(Smalltalk at: s asSymbol ifAbsent: [  ])
