@@ -1,9 +1,9 @@
 tests-overall
 testForbiddenMethod
-	"Use the type check overall on the package"
+	"Test that this method cannot be checked."
 
 	| method checker |
-	method := AltAnyType >> #check:.
+	method := AltArrayOfChecks >> #checkAll:.
 	self deny: method ast hasMetalink.
 	checker := AltTypeCheck new.
 	[ checker applyOnMethod: method.
