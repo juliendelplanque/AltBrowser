@@ -4,8 +4,12 @@
 	"category" : "Alt-TypeCheck",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"Register"
+	],
 	"instvars" : [
+		"entity",
+		"visited",
 		"links"
 	],
 	"name" : "AltTypeCheck",

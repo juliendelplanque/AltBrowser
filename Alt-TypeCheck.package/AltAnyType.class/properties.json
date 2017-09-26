@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "<historical>",
 	"super" : "AltAbstractType",
-	"category" : "Alt-TypeCheck",
+	"category" : "Alt-TypeCheck-Types",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

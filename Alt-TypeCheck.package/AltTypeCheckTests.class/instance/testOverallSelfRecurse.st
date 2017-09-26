@@ -2,13 +2,13 @@ tests-overall
 testOverallSelfRecurse
 	"Use the type check overall on the method"
 
-	| method checker |
+	| method checker checker2 |
 	method := AltTypeCheckTests >> #compare:with:.
 	self deny: method ast hasMetalink.
-	[ checker := AltTypeCheck new.
-	checker
-		applyOn: self class;
-		applyOn: AltObjectType.
+	checker := AltTypeCheck new.
+	checker2 := AltTypeCheck new.
+	[ checker applyOn: self class.
+	checker2 applyOn: AltObjectType.
 	self
 		shouldnt: [ self compare: #($a $b) with: #(1 2) ]
 		raise: AssertionFailure.
@@ -21,5 +21,7 @@ testOverallSelfRecurse
 	self
 		should: [ self compare3: #(1 2) with: #(1 2) ]
 		raise: AssertionFailure ]
-		ensure: [ checker unapply ].
-	self deny: method ast hasMetalink
+		ensure: [ checker unapply.
+			checker2 unapply ].
+	self deny: method ast hasMetalink.
+	self assert: AltTypeCheck register isEmpty

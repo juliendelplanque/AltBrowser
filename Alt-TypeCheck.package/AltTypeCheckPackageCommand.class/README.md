@@ -1,0 +1,1 @@
+I integrate the type check command for a package in the AltBrowser

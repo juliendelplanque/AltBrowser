@@ -1,6 +1,6 @@
 tests-scan
 testScanAnAltOfChar
-	"Example of a mismatch: considered as a collection."
+	"Example of a ambiguity well handled: considered as a class test."
 
 	| scanner res |
 	scanner := AltTypeCheckScanner on: (ReadStream on: 'anAltOfChar').

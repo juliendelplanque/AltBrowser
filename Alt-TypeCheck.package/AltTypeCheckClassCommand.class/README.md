@@ -1,0 +1,1 @@
+I integrate the type-checking command for a class into the AltBrowser

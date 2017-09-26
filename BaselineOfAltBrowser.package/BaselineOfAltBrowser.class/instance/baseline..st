@@ -6,8 +6,7 @@ baseline: spec
 		do: [ spec blessing: #baseline.
 			spec
 				package: 'Alt-List';
-				package: 'Alt-TypeCheck';
-				package: 'Alt-Browser' with: [ spec requires: 'Alt-List' ];
+				package: 'Alt-Browser' with: [ spec requires: #('Alt-List') ];
+				package: 'Alt-TypeCheck' with: [ spec requires: 'Alt-Browser' ];
 				package: 'Jejak' with: [ spec requires: 'Alt-Browser' ];
-				group: 'default'
-					with: #('Alt-List' 'Alt-TypeCheck' 'Alt-Browser' 'Jejak') ]
+				group: 'default' with: #('Alt-Browser' 'Jejak' 'Alt-TypeCheck') ]

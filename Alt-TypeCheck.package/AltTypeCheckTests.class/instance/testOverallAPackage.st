@@ -5,8 +5,7 @@ testOverallAPackage
 	| method checker |
 	method := AltTypeCheckTests >> #compare:with:.
 	self deny: method ast hasMetalink.
-	[ checker := AltTypeCheck new.
-	checker applyOn: self class package.
+	[ checker := AltTypeCheck on: self class package.
 	self
 		shouldnt: [ self compare: #($a $b) with: #(1 2) ]
 		raise: AssertionFailure.
@@ -20,4 +19,5 @@ testOverallAPackage
 		should: [ self compare3: #(1 2) with: #(1 2) ]
 		raise: AssertionFailure ]
 		ensure: [ checker unapply ].
-	self deny: method ast hasMetalink
+	self deny: method ast hasMetalink.
+	self assert: AltTypeCheck register isEmpty

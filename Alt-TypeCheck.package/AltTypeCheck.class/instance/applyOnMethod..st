@@ -1,10 +1,11 @@
 accessing
 applyOnMethod: aMethod
 	| checks link |
-	(self forbiddenMethods includes: aMethod)
-		ifTrue: [ ^ self ].
 	aMethod ast arguments isEmpty
 		ifTrue: [ ^ self ].
+	(self forbiddenMethods includes: aMethod)
+		ifTrue: [ ^ self ].
+	self incrementVisited.
 	checks := AltArrayOfChecks new
 		checks:
 			(aMethod ast arguments
