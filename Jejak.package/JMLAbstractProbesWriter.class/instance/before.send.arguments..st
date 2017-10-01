@@ -5,3 +5,4 @@ before: aRBProgramNode send: aSymbol arguments: anArrayOfSymbols
 		send: aSymbol
 		with: anArrayOfSymbols
 		control: #before
+		option: nil

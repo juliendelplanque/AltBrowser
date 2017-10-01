@@ -5,6 +5,6 @@ visitAssignmentNode: aRBAssignmentNode
 	| link |
 	super visitAssignmentNode: aRBAssignmentNode.
 	self
-		before: aRBAssignmentNode
+		after: aRBAssignmentNode
 		send: #assign:to:node:
 		arguments: #(newValue name node)

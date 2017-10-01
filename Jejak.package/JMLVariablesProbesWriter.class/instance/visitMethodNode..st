@@ -6,8 +6,8 @@ visitMethodNode: aRBMethodNode
 	super visitMethodNode: aRBMethodNode.
 	self
 		before: aRBMethodNode
-		send: #enter:selector:node:
-		arguments: #(receiver selector node).
+		send: #enter:selector:arguments:node:
+		arguments: #(receiver selector arguments node).
 	stats := aRBMethodNode body statements.
 	(stats last isKindOf: RBReturnNode)
 		ifFalse: [ self after: stats last send: #return: arguments: #(object) ]

@@ -3,7 +3,7 @@ visitBlockNode: aRBBlockNode
 	super visitBlockNode: aRBBlockNode.
 	self
 		before: aRBBlockNode statements first
-		send: #enter:
+		send: #enterBlock:
 		arguments: #(node).
 	(aRBBlockNode statements last isKindOf: RBReturnNode)
 		ifFalse: [ self

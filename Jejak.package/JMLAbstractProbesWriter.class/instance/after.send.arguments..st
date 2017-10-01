@@ -5,3 +5,4 @@ after: aRBProgramNode send: aSymbol arguments: anArrayOfSymbols
 		send: aSymbol
 		with: anArrayOfSymbols
 		control: #after
+		option: #(+ optionWeakAfter)

@@ -1,5 +1,5 @@
 private
-trace: aRBProgramNode send: aSymbol with: anArrayOfSymbols control: anotherSymbol
+trace: aRBProgramNode send: aSymbol with: anArrayOfSymbols control: anotherSymbol option: anArrayOfSymbolOptions
 	"Create a Metalink on the node, with the right action and control argument."
 
 	| link |
@@ -8,5 +8,7 @@ trace: aRBProgramNode send: aSymbol with: anArrayOfSymbols control: anotherSymbo
 		selector: aSymbol;
 		arguments: anArrayOfSymbols;
 		control: anotherSymbol.
+	anArrayOfSymbolOptions notNil
+		ifTrue: [ link option: anArrayOfSymbolOptions ].
 	aRBProgramNode link: link.
 	self links add: link
