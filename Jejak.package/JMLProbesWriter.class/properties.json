@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RBProgramNodeVisitor",
+	"category" : "Jejak",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"links"
+	],
+	"name" : "JMLProbesWriter",
+	"type" : "normal"
+}

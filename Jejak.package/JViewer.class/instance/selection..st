@@ -23,7 +23,7 @@ selection: anItem
 		at: (Array with: a methodClass with: r selector)
 		ifAbsent: [ a ].
 	s := m sourceCode.
-	n := JCodeNodeFinder find: node nodeId in: m.
+	n := node nodeId  isInteger ifTrue: [ JCodeNodeFinder find: node nodeId in: m ] ifFalse: [node nodeId ].
 	s isNil
 		ifTrue: [ ^ self ].
 	source contents: s.

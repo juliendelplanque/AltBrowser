@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Jejak",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"array"
+	],
+	"instvars" : [ ],
+	"name" : "JInstrumentedMethods2",
+	"type" : "normal"
+}

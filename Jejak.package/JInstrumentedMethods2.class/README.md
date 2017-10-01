@@ -1,0 +1,1 @@
+I store methods being instrumented. Each of my entries is a compiled method and the value is the list of metalinks added to that method.
