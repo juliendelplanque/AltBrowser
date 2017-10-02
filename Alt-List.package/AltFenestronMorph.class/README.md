@@ -1,0 +1,1 @@
+I represent a small viewport on a larger space, shown directly

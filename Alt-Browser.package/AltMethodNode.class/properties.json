@@ -4,7 +4,9 @@
 	"category" : "Alt-Browser-Nodes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"ProtectedMethods"
+	],
 	"instvars" : [ ],
 	"name" : "AltMethodNode",
 	"type" : "normal"

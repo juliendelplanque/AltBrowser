@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "AltCommand",
-	"category" : "Jejak",
+	"super" : "Morph",
+	"category" : "Alt-List",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "JTraceCommand",
+	"instvars" : [
+		"fenestron"
+	],
+	"name" : "AltFenestronMorph",
 	"type" : "normal"
 }

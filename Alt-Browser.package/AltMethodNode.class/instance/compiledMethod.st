@@ -1,3 +1,3 @@
 accessing
 compiledMethod
-	^ self parent privateClass compiledMethodAt: self selector
+	^ self parent privateClass >> self selector
