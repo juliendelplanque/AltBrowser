@@ -5,10 +5,10 @@ displayCleanTraceCArleast5
 	"JTests new displayCleanTraceCArleast5"
 
 	JCollecteur recorder: JRecorder new.
-	#(#rleast: #reorder: #least:array2:) 
-		do: [:e | JVariableProbesWriter analyse: e in: JExampleArray].
+	#(#rleast: #reorder: #least:array2:)
+		do: [ :e | JVariableProbesWriter analyse: JExampleArray >> e ].
 	self testCArleast5.
 	JLoopArrange do: JCollecteur recorder elements first value.
 	JMethodArrange do: JCollecteur recorder elements first value.
 	JViewer open.
-	JProbesWriter uninstall.
+	JProbesWriter uninstall

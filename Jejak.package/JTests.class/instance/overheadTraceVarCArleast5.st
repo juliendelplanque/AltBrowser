@@ -10,7 +10,8 @@ overheadTraceVarCArleast5
 	1 to: var size do: [ :i | var at: i put: (r next * 15) rounded ].
 	TimeProfiler onBlock: [ 10000 timesRepeat: [ var rleast: 5 ] ].
 	JCollecteur recorder: JEmptyRecorder new.
-	#(#rleast: #reorder: #least:array2:) do: [ :e | JCFGProbesWriter analyse: e in: JExampleArray ].
-	TimeProfiler onBlock: [ 10000 timesRepeat: [ var rleast: 5 ] ].
-	JProbesWriter uninstall.
+	[ #(#rleast: #reorder: #least:array2:)
+		do: [ :e | JCFGProbesWriter analyse: JExampleArray >> e ].
+	TimeProfiler onBlock: [ 10000 timesRepeat: [ var rleast: 5 ] ] ]
+		ensure: [ JProbesWriter uninstall ].
 	JCollecteur recorder: JRecorder new

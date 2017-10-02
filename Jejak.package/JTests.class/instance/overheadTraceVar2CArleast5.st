@@ -1,7 +1,7 @@
 profiling
 overheadTraceVar2CArleast5
 	"Tracing overhead on the array least5 search."
-	
+
 	"JTests new overheadTraceVar2CArleast5"
 
 	| var r |
@@ -10,12 +10,11 @@ overheadTraceVar2CArleast5
 	1 to: var size do: [ :i | var at: i put: (r next * 15) rounded ].
 	TimeProfiler onBlock: [ 10000 timesRepeat: [ var rleast: 5 ] ].
 	JCollecteur recorder: JEmptyRecorder new.
-	#(#rleast: #reorder: #least:array2:) do: [ :e | JCFGProbesWriterToVar analyse: e in: JExampleArray ].
+	#(#rleast: #reorder: #least:array2:)
+		do: [ :e | JCFGProbesWriterToVar analyse: JExampleArray >> e ].
 	TimeProfiler
-		onBlock: [ 
-			10000
-				timesRepeat: [ 
-					var rleast: 5.
+		onBlock: [ 10000
+				timesRepeat: [ var rleast: 5.
 					JCollecteur recorder reset ] ].
 	JProbesWriter uninstall.
 	JCollecteur recorder: JRecorder new
