@@ -1,0 +1,1 @@
+I represent an element of a bag (my host)

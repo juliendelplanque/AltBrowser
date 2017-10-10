@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltTreeItemModel",
+	"category" : "Alt-Inspector",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model",
+		"copy"
+	],
+	"name" : "AltEyeTreeItemModel",
+	"type" : "normal"
+}

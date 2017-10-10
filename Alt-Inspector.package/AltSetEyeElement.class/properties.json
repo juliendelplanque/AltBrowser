@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltIndexedEyeElement",
+	"category" : "Alt-Inspector-Element",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"externalIndex"
+	],
+	"name" : "AltSetEyeElement",
+	"type" : "normal"
+}

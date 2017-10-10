@@ -1,0 +1,1 @@
+I inspect a float instance, providing alternative implementations

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltAbstractEyeElement",
+	"category" : "Alt-Inspector-Element",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tempName",
+		"tempIndex"
+	],
+	"name" : "AltContextTempEyeElement",
+	"type" : "normal"
+}

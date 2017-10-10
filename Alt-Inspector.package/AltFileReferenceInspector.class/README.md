@@ -1,0 +1,1 @@
+I inspect a file reference. I can add the children file entries if I point to a directory

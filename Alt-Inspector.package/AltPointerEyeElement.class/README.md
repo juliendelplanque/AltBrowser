@@ -1,0 +1,1 @@
+I hold a reference to a pointer, so that pointer referers stop at me

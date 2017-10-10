@@ -1,0 +1,1 @@
+I inspect a bag, a variant of collection

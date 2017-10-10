@@ -1,0 +1,1 @@
+I am the inspector for a collection

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Alt-Inspector",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"object",
+		"treeMorph",
+		"textMorph",
+		"window"
+	],
+	"name" : "AltInspector",
+	"type" : "normal"
+}

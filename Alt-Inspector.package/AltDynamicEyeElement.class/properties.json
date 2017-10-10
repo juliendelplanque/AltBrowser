@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltAbstractEyeElement",
+	"category" : "Alt-Inspector-Element",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"description",
+		"value",
+		"label",
+		"save"
+	],
+	"name" : "AltDynamicEyeElement",
+	"type" : "normal"
+}

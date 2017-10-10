@@ -1,0 +1,1 @@
+I inspect an integer instance, providing alternative representations

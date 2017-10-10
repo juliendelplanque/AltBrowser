@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltCollectionInspector",
+	"category" : "Alt-Inspector-Inspectors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "AltByteArrayInspector",
+	"type" : "normal"
+}

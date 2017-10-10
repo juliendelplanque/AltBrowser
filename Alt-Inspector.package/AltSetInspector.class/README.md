@@ -1,0 +1,1 @@
+I inspect a set, by building an external index to its elements

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltTreeItemModel",
+	"category" : "Alt-Inspector",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"presentation"
+	],
+	"name" : "AltTreeGTIPresentationModel",
+	"type" : "normal"
+}

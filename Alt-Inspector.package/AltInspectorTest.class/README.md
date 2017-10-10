@@ -1,0 +1,1 @@
+I test the framework just by opening inspectors and checking there are no errors doing so.

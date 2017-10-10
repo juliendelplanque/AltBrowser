@@ -1,0 +1,3 @@
+*alt-inspector
+altInspectorClass
+	^ AltFloatInspector

@@ -1,0 +1,1 @@
+I inspect a date and time object, providing alternative representations
