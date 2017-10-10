@@ -1,3 +1,0 @@
-accessing
-doItReceiver
-	^ item value

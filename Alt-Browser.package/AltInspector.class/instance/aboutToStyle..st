@@ -1,3 +1,0 @@
-accessing
-aboutToStyle: aBoolean
-	^ true

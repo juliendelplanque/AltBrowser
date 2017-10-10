@@ -1,3 +1,0 @@
-accessing
-sourceClass
-	^ item value

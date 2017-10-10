@@ -1,3 +1,0 @@
-*alt-browser
-altInspectorClass
-	^ AltEyeCollectionInspector

@@ -1,3 +1,0 @@
-accessing
-aboutToStyle
-	^ true

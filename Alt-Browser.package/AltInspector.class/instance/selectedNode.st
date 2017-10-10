@@ -1,3 +1,0 @@
-selection
-selectedNode
-	^ object selectedItem

@@ -1,1 +1,0 @@
-Try to overcome the EyeInspector limitations in the number of items

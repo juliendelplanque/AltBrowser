@@ -1,1 +1,0 @@
-Override the limits set to collections when inspecting, or set them as very large

@@ -1,1 +1,0 @@
-Explore the pointers on the object

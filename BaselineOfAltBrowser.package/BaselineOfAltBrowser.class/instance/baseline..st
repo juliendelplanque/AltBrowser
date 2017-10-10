@@ -8,5 +8,7 @@ baseline: spec
 				package: 'Alt-List';
 				package: 'Alt-Browser' with: [ spec requires: #('Alt-List') ];
 				package: 'Alt-TypeCheck' with: [ spec requires: 'Alt-Browser' ];
+				package: 'Alt-Inspector' with: [ spec requires: 'Alt-Browser' ];
 				package: 'Jejak' with: [ spec requires: 'Alt-Browser' ];
-				group: 'default' with: #('Alt-Browser' 'Jejak' 'Alt-TypeCheck') ]
+				group: 'default'
+					with: #('Alt-Browser' 'Alt-Inspector' 'Jejak' 'Alt-TypeCheck') ]

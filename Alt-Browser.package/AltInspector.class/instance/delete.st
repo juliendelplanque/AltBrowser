@@ -1,3 +1,0 @@
-initialization
-delete
-	self release
