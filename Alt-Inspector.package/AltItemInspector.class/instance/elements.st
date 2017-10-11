@@ -3,6 +3,6 @@ elements
 	| elements |
 	elements := OrderedCollection new.
 	self addSpecialFields: elements.
-	self addInstancesVariable: elements.
+	self addInstanceVariables: elements.
 	self addVariableFields: elements.
 	^ elements
