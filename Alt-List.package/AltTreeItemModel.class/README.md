@@ -6,4 +6,4 @@ I don't have the normal Model behavior, I only have an announcer.
 
 By default, I have a hiddent root sitting at index 0 (see changes in my behavior when my parent is nil).
 
-I am polymorphic to a list: the list object itself sits as the root item (0) and all elements of the list are the [1-n] items.
+I am polymorphic to a list: the list object itself sits as the root item (0) and all elements of the list are the [1..n] items.
