@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "Alt-Debugger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stack",
+		"textMorph",
+		"inspector",
+		"session"
+	],
+	"name" : "AltDebugger",
+	"type" : "normal"
+}

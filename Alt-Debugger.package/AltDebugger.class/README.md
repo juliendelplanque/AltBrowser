@@ -1,0 +1,1 @@
+I represent the GUI for a debugger
