@@ -22,23 +22,21 @@ open
 		for: self
 		title: self title.
 	window addMorph: pane frame: (0 @ 0 corner: 1 @ 1).
-	treeMorph := self defaultTreeMorph.
-	textMorph := self defaultTextMorph.
-	textMorph styler workspace: self.
-	treeMorph
+	self textMorph styler workspace: self.
+	self treeMorph
 		on: #keyStroke
 		send: #startSearch:for:
 		to: AltKeyboardSearchInTree.
 	pane addMorph: group.
 	group
-		addMorph: treeMorph
+		addMorph: self treeMorph
 		fullFrame:
 			(AltLayoutFrame
 				fractions: (0.0 @ 0.0 corner: 1.0 @ 0.8)
 				topLeftOffsets: 1 @ 0
 				bottomRightOffsets: -1 @ -1).
 	group
-		addMorph: textMorph
+		addMorph: self textMorph
 		fullFrame:
 			(AltLayoutFrame
 				fractions: (0.0 @ 0.8 corner: 1.0 @ 1.0)
@@ -53,8 +51,8 @@ open
 						fractions: (0.0 @ 0.8 corner: 1.0 @ 0.8)
 						topLeftOffsets: -1 @ -1
 						bottomRightOffsets: 1 @ 1);
-				addLeftOrTop: treeMorph;
-				addRightOrBottom: textMorph).
+				addLeftOrTop: self treeMorph;
+				addRightOrBottom: self textMorph).
 	window minimumExtent: 200 @ 300.
 	window announcer when: WindowClosed send: #release to: self.
 	window open.
@@ -62,4 +60,4 @@ open
 		updateTreeKeymap;
 		updateTextKeymap;
 		updateSelection.
-	treeMorph takeKeyboardFocus
+	self treeMorph takeKeyboardFocus

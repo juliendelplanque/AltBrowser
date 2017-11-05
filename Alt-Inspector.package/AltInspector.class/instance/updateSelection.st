@@ -1,6 +1,6 @@
 selection
 updateSelection
-	"Update from the model if needed."
+	"Update from the model."
 
 	| modelSelection |
 	modelSelection := self selectedItem.
