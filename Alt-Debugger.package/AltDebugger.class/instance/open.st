@@ -1,6 +1,6 @@
 user interface
 open
-	"Open the window, as simple as that."
+	"Open the window, as simple as that. Still missing the inspector part."
 
 	| pane group |
 	pane := PanelMorph new
@@ -45,7 +45,6 @@ open
 	group
 		addMorph:
 			(ProportionalSplitterMorph new
-				beSplitsTopAndBottom;
 				layoutFrame:
 					(AltLayoutFrame
 						fractions: (0.3 @ 0.0 corner: 0.3 @ 1.0)
