@@ -6,7 +6,7 @@ execute
 	rcvr := requestor selectedNode doItReceiver.
 	result := [ rcvr class compilerClass new
 		evaluate: (ReadStream on: target trueSelection)
-		in: nil
+		in: requestor selectedNode doItContext
 		to: rcvr
 		notifying: target
 		ifFail: [ target flash.

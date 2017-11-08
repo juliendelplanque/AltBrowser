@@ -1,3 +1,6 @@
 instance creation
 on: aDebugSession
-	^ self new session: aDebugSession
+	^ self new
+		session: aDebugSession;
+		open;
+		yourself
