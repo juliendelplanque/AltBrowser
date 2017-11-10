@@ -4,10 +4,10 @@ buildStackShortcutsOn: aKMDispatcher for: aRequestor
 
 	(self
 		pragmas: #stackAreaCommand
-		from: item class
-		to: AltAbstractEyeElement)
+		from: self class
+		to: AltContextItemModel)
 		do: [ :e | 
-			(item perform: e methodSelector)
+			(self perform: e methodSelector)
 				do: [ :c | 
 					| command |
 					command := c asClass on: aRequestor stackMorph for: aRequestor.

@@ -1,7 +1,8 @@
 accessing
 stack
 	^ stack
-		ifNil: [ stack := AltContextItemModel new.
+		ifNil: [ stack := AltContextItemRootModel new.
+			stack model: self.
 			stack announcer
 				when: AltSelectionChanged send: #updateSelection to: self;
 				when: AltListChanged send: #updateSelection to: self.

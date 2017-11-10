@@ -1,0 +1,1 @@
+I am the root of the list of context items (the stack of a debug session)
