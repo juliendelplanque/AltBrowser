@@ -7,8 +7,9 @@ updateSelection
 	modelSelection isNil
 		ifTrue: [ textMorph ifNotNil: [ :t | t classOrMetaClass: nil ] ]
 		ifFalse: [ textMorph
-				ifNotNil: [ :t | 
-					t classOrMetaClass: modelSelection styleClass.
-					t styler isForWorkspace: false ].
+				ifNotNil: [ :t | t classOrMetaClass: modelSelection styleClass ].
 			self source aboutToStyle: true.
-			self source contents: modelSelection sourceCode ]
+			self source contents: modelSelection sourceCode.
+			self inspector object item: modelSelection item.
+			self inspector object contents: nil.
+			self inspector object changed ]

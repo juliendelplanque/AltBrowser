@@ -1,0 +1,3 @@
+accessing
+rbEnvironment
+	^ RBBrowserEnvironment new

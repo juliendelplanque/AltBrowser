@@ -12,7 +12,8 @@
 		"stackMorph",
 		"source",
 		"stack",
-		"window"
+		"window",
+		"context"
 	],
 	"name" : "AltDebugger",
 	"type" : "normal"

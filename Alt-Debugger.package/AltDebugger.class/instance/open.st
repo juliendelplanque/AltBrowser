@@ -2,47 +2,64 @@ user interface
 open
 	"Open the window, as simple as that. Still missing the inspector part."
 
-	| pane group |
-	pane := PanelMorph new
-		hResizing: #spaceFill;
-		vResizing: #spaceFill;
-		fillStyle: Color transparent;
-		changeTableLayout;
-		cellInset: 3 @ 3;
-		cellPositioning: #leftCenter;
-		yourself.	"non pane color tracking"
-	group := Morph new
+	| pane right |
+	pane := Morph new
 		hResizing: #spaceFill;
 		vResizing: #spaceFill;
 		fillStyle: Color transparent;
 		changeProportionalLayout;
 		yourself.	"non pane color tracking"
+	right := Morph new
+		hResizing: #spaceFill;
+		vResizing: #spaceFill;
+		layoutInset: 0;
+		changeProportionalLayout;
+		color: Color transparent;
+		yourself.	"non pane color tracking"
 	window := Smalltalk ui theme
 		newWindowIn: World
 		for: self
 		title: self title.
-	window addMorph: pane frame: (0 @ 0 corner: 1 @ 1).
-	self textMorph styler workspace: self.
+	window
+		addMorph: pane
+		fullFrame:
+			(AltLayoutFrame
+				fractions: (0 @ 0 corner: 1 @ 1)
+				topLeftOffsets: 0 @ 0
+				bottomRightOffsets: 0 @ 0).
+	right
+		addMorph: self inspectorMorph
+		fullFrame:
+			(AltLayoutFrame
+				fractions: (0 @ 1 corner: 1 @ 1)
+				topLeftOffsets: 0 @ -198
+				bottomRightOffsets: 0 @ 0).
+	right
+		addMorph: self textMorph
+		fullFrame:
+			(AltLayoutFrame
+				fractions: (0 @ 0 corner: 1 @ 1)
+				topLeftOffsets: 0 @ 0
+				bottomRightOffsets: 0 @ -201).
 	self stackMorph
 		on: #keyStroke
 		send: #startSearch:for:
 		to: AltKeyboardSearchInTree.
-	pane addMorph: group.
-	group
+	pane
 		addMorph: self stackMorph
 		fullFrame:
 			(AltLayoutFrame
 				fractions: (0.0 @ 0.0 corner: 0.3 @ 1.0)
 				topLeftOffsets: 1 @ 0
 				bottomRightOffsets: -1 @ 0).
-	group
-		addMorph: self textMorph
+	pane
+		addMorph: right
 		fullFrame:
 			(AltLayoutFrame
 				fractions: (0.3 @ 0.0 corner: 1.0 @ 1.0)
 				topLeftOffsets: 1 @ 1
 				bottomRightOffsets: -1 @ 0).
-	group
+	pane
 		addMorph:
 			(ProportionalSplitterMorph new
 				layoutFrame:
