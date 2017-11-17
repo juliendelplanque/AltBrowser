@@ -6,8 +6,7 @@ item: anObject
 	self addMorph: item asMorph.
 	item icon ifNotNil: [ :icon | self addMorph: icon asMorph ].
 	item hasContents
-		ifTrue:
-			[ | toggle enclosing |
+		ifTrue: [ | toggle enclosing |
 			enclosing := Morph new.
 			enclosing color: Color transparent.
 			toggle := item isExpanded
@@ -19,8 +18,8 @@ item: anObject
 			toggle center: enclosing center.
 			enclosing on: #mouseDown send: #toggleExpanded to: item.
 			self addMorph: enclosing ]
-		ifFalse:
-			[ self addMorph: (Form extent: 10 @ 9 depth: Display depth) asMorph ].
+		ifFalse: [ item couldExpand
+				ifTrue: [ self addMorph: (Form extent: 10 @ 9 depth: Display depth) asMorph ] ].
 	self computeBounds.
 	self bottom: self bottom + 2.
 	self submorphs do: [ :e | e top: 1 ].
