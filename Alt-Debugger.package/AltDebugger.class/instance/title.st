@@ -1,3 +1,3 @@
 accessing
 title
-	^ 'Debugger'
+	^ 'Debug: ' , session name
