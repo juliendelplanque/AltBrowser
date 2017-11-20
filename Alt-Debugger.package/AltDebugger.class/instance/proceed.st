@@ -1,5 +1,5 @@
 actions
-resume
+proceed
 	self session
 		resume;
 		clear.
