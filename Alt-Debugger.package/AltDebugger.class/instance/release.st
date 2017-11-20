@@ -5,4 +5,5 @@ release
 	stackMorph ifNotNil: [ stackMorph release ].
 	inspector ifNotNil: [ inspector release ].
 	EditorFindReplaceDialogWindow initialize.
+	self terminate.
 	super release
