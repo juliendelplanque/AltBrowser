@@ -1,3 +1,3 @@
 accessing
 label
-	^ 'Run example...'
+	^ 'Run ' , self node selector , '...'
