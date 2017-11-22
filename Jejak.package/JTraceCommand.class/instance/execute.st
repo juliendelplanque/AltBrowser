@@ -7,5 +7,11 @@ execute
 			(aKey := Array
 				with: aCompiledMethod methodClass name
 				with: aCompiledMethod selector))
-		ifTrue: [ JInstrumentedMethods at: aKey ]
+		ifTrue: [ | additions |
+			additions := OrderedCollection new.
+			(JInstrumentedMethods at: aKey) addMethodAdditionTo: additions.
+			additions do: [ :each | each installMethod ].
+			additions do: [ :each | each notifyObservers ].
+			JInstrumentedMethods array removeKey: aKey.
+			AltMethodNode removeMethodAt: aKey first and: aKey second ]
 		ifFalse: [ JVariableProbesWriter analyse: aCompiledMethod ]
