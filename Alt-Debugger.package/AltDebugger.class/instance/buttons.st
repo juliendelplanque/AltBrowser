@@ -10,7 +10,7 @@ buttons
 	aDebuggerThroughButton := self pluggableButtonDo: #through named: 'Through'.
 	aDebuggerRunToHereButton := self pluggableButtonDo: #runToHere named: 'Run to here'.	
 	aDebuggerWhereIsButton := self pluggableButtonDo: #whereIs named: 'Where is?'.	
-	^ (AlignmentMorph newRow
+	^ (toolbar := AlignmentMorph newRow
 				vResizing: #shrinkWrap;
 				hResizing: #spaceFill;
 				layoutInset: 0;

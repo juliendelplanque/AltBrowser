@@ -3,7 +3,7 @@ codeCallingCodeWithHalt
 	<example>
 	
 	| x y |
-	x := 1.
+	x := 2.
 	y := self codeWithHalt.
 	x := x + y.
 	^ x

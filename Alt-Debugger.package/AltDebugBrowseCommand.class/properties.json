@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "AltMethodContextInspector",
+	"super" : "AltCommand",
 	"category" : "Alt-Debugger",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "AltDebuggerContextInspector",
+	"name" : "AltDebugBrowseCommand",
 	"type" : "normal"
 }

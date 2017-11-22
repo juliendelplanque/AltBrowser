@@ -23,7 +23,9 @@
 		"source",
 		"stack",
 		"window",
-		"context"
+		"context",
+		"extensions",
+		"toolbar"
 	],
 	"name" : "AltDebugger",
 	"type" : "normal"

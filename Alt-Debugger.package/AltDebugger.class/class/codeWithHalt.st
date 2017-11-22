@@ -6,5 +6,5 @@ codeWithHalt
 	y := 5.
 	x := x + y.
 	self halt.
-	y := y + x.
+	y := y + x + x.
 	^ y
