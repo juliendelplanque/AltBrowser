@@ -1,3 +1,3 @@
-testing
+settings
 alwaysOpenFullDebugger
-	^ true
+	^ AlwaysOpenFullDebugger ifNil: [AlwaysOpenFullDebugger := false]

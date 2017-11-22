@@ -4,7 +4,17 @@
 	"category" : "Alt-Debugger",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"AlwaysOpenFullDebugger",
+		"DoItFilterEnabled",
+		"ErrorRecursion",
+		"FilterCommonMessageSends",
+		"FilterDictionary",
+		"KCFilterEnabled",
+		"LinkSelectorFilterEnabled",
+		"LogDebuggerStackToFile",
+		"NilSelectorsFilterEnabled"
+	],
 	"instvars" : [
 		"textMorph",
 		"inspector",
