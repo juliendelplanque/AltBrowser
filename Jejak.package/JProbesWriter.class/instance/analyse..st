@@ -9,7 +9,7 @@ analyse: aCompiledMethod
 	aClass isNil
 		ifTrue: [ ^ self ].
 	(JInstrumentedMethods
-		includesKey: (Array with: aClass with: aCompiledMethod selector))
+		includesKey: (Array with: aClass name with: aCompiledMethod selector))
 		ifTrue: [ ExampleBuilderMorph new alert: 'Method already instrumented.'.
 			^ self ].
 	mclass := aClass.

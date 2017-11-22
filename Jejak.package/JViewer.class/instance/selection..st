@@ -22,8 +22,12 @@ selection: anItem
 	m := JInstrumentedMethods
 		at: (Array with: a methodClass with: r selector)
 		ifAbsent: [ a ].
-	s := m sourceCode.
-	n := node nodeId  isInteger ifTrue: [ JCodeNodeFinder find: node nodeId in: m ] ifFalse: [node nodeId ].
+	s := AltMethodNode protectedMethods
+		at: (Array with: m methodClass name with: m selector)
+		ifAbsent: [ m sourceCode ].
+	n := node nodeId isInteger
+		ifTrue: [ JCodeNodeFinder find: node nodeId in: m ]
+		ifFalse: [ node nodeId ].
 	s isNil
 		ifTrue: [ ^ self ].
 	source contents: s.

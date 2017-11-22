@@ -1,13 +1,11 @@
 execution
 execute
-	| aCompiledMethod |
+	| aCompiledMethod aKey |
 	aCompiledMethod := requestor selectedNode item compiledMethod.
 	(JInstrumentedMethods
 		includesKey:
-			(Array
-				with: aCompiledMethod methodClass
+			(aKey := Array
+				with: aCompiledMethod methodClass name
 				with: aCompiledMethod selector))
-		ifTrue: [ aCompiledMethod methodClass
-				addSelector: aCompiledMethod selector
-				withMethod: (JInstrumentedMethods at: aCompiledMethod) ]
+		ifTrue: [ JInstrumentedMethods at: aKey ]
 		ifFalse: [ JVariableProbesWriter analyse: aCompiledMethod ]
