@@ -23,5 +23,4 @@ updateSelection
 							t selectFrom: s first to: s last.
 							t scrollSelectionIntoView ] ].
 			self inspector object item: modelSelection item.
-			self inspector object contents: nil.
-			self inspector object changed ]
+			self inspector object rebuildContents ]
