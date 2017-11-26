@@ -15,11 +15,11 @@ altDebuggerExtensions: anAltDebugger
 
 	| aButton |
 	aButton := PluggableButtonMorph
-		on: self class >> #altDebuggerExtensions:
+		on: anAltDebugger
 		getState: nil
-		action: #browse.
+		action: #browseReceiver.
 	aButton
 		hResizing: #spaceFill;
 		vResizing: #shrinkWrap;
-		label: 'Browse'.
+		label: 'Example of a custom Browse action'.
 	^ Array with: aButton
