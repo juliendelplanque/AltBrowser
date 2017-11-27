@@ -4,21 +4,17 @@ buildTextMenu: aMenu on: aTarget with: aRequestor
 
 	| ast node |
 	super buildTextMenu: aMenu on: aTarget with: aRequestor.
-	aTarget hasUnacceptedEdits
-		ifTrue:
-			[ ast := RBParser
-				parseMethod: aTarget text asString
-				onError: [ :msg :pos | ^ self ].
-			ast doSemanticAnalysisIn: self sourceClass ]
-		ifFalse: [ ast := self compiledMethod ast ].
+	ast := RBParser
+		parseMethod: aTarget text asString
+		onError: [ :msg :pos | ^ self ].
+	ast doSemanticAnalysisIn: self sourceClass.
 	(node := ast bestNodeFor: aTarget selectionInterval) notNil
 		ifFalse: [ ^ self ].
 	aMenu
 		addLine;
 		addLine.
 	node altTextCommands
-		do:
-			[ :c | 
+		do: [ :c | 
 			(c asClass on: aTarget for: aRequestor node: node)
 				addItemToMenu: aMenu ].
 	node canSelect
