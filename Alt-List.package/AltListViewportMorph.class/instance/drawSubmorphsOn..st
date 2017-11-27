@@ -9,6 +9,7 @@ drawSubmorphsOn: canvas
 	| x y rowsToDisplay rowSubviews |
 	self bounds ifNil: [ ^ self ].	"Nothing to show yet"
 	self owner ifNil: [ ^ self ].
+	self owner model size = 0 ifTrue: [ ^ self ].
 	self updateItemsOrRows
 		ifTrue:
 			[ rowsToDisplay := self exposedItems keys asSortedCollection asArray.	"Do not rely on exposedItems ordering"
