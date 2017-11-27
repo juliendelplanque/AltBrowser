@@ -1,0 +1,1 @@
+I represent a record into the collecteur

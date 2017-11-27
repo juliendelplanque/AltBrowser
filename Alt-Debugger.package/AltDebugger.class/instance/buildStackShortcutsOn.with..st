@@ -4,4 +4,4 @@ buildStackShortcutsOn: aKMDispatcher with: aRequestor
 
 	self selectedItem
 		buildStackShortcutsOn: aKMDispatcher
-		for: aRequestor
+		with: aRequestor

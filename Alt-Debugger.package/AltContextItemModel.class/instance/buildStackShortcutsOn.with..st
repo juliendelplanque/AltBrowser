@@ -1,5 +1,5 @@
 commands
-buildStackShortcutsOn: aKMDispatcher for: aRequestor
+buildStackShortcutsOn: aKMDispatcher with: aRequestor
 	"This is an attempt at handling shortcuts...."
 
 	(self

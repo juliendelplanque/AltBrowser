@@ -1,11 +1,18 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "AltCommand",
+	"super" : "Object",
 	"category" : "Jejak-GUI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "JTraceCommand",
+	"instvars" : [
+		"treeMorph",
+		"records",
+		"window",
+		"source",
+		"tree",
+		"textMorph"
+	],
+	"name" : "JViewer2",
 	"type" : "normal"
 }

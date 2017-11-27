@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "AltCommand",
+	"super" : "AltTreeItemModel",
 	"category" : "Jejak-GUI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "JTraceCommand",
+	"name" : "JViewer2Node",
 	"type" : "normal"
 }

@@ -4,10 +4,7 @@ buildTextMenu: aMenu on: aTarget with: aRequestor
 
 	| ast node t |
 	t := false.
-	((self
-		pragmas: #textAreaCommand
-		from: self class
-		to: AltTreeItemModel)
+	((self pragmas: #textAreaCommand from: self class to: AltAbstractNode)
 		sorted: [ :a :b | a methodSelector < b methodSelector ])
 		do: [ :p | 
 			t
