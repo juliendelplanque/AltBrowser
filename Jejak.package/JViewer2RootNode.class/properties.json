@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "JViewer2Node",
+	"category" : "Jejak-GUI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"model"
+	],
+	"name" : "JViewer2RootNode",
+	"type" : "normal"
+}

@@ -4,6 +4,7 @@ findCurrentVerticalValue
 
 	| n |
 	(n := self modelSize) ifNil: [ ^ nil ].
+		n = 0 ifTrue: [ ^nil ].
 	exposedItems
 		ifNotNil: [ :e | 
 			e
