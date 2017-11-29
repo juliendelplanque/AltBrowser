@@ -3,10 +3,8 @@ visitArgumentNode: aNode
 	"Check if we have the right node. If yes, return it. If not, continue the search."
 
 	^ target == no
-		ifTrue: [ 
-			JCodeNodeFound new
+		ifTrue: [ JCodeNodeFound new
 				tag: aNode;
 				signal ]
-		ifFalse: [ 
-			no := no + 1.
-			aNode acceptVisitor: self ]
+		ifFalse: [ no := no + 1.
+			self visitVariableNode: aNode ]

@@ -1,11 +1,13 @@
 accessing
-find: aNodeId in: aMethod
+find: aNodeId in: aCompiledMethod
 	"Find a node in an ast in parameter."
 
-	| c |
+	| c ast |
 	c := self new.
 	c target: aNodeId.
-	[ c visitNode: (RBParser parseMethod: aMethod sourceCode) ]
+	ast := RBParser parseMethod: aCompiledMethod sourceCode.
+	ast doSemanticAnalysisIn: aCompiledMethod methodClass.
+	[ c visitNode: ast ]
 		on: JCodeNodeFound
 		do: [ :ex | ^ ex tag ].
 	^ SubscriptOutOfBounds signal

@@ -1,13 +1,12 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "RBProgramNodeVisitor",
+	"super" : "JProbesWriter",
 	"category" : "Jejak",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"target",
-		"no"
+		"target"
 	],
 	"name" : "JCodeNodeFinder",
 	"type" : "normal"

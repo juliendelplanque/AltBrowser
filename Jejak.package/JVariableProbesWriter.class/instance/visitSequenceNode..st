@@ -2,17 +2,17 @@ visiting
 visitSequenceNode: aNode
 	| tps2 nodeId stats |
 	nodeId := no.
-	tps2 := aNode temporaries collect: [ :e | self visitNode: e ].
+	tps2 := self visitArgumentNodes: aNode temporaries.
 	stats := aNode statements collect: [ :s | self visitNode: s ].
 	tps2 isEmpty
-		ifFalse: [ 
-			stats
+		ifFalse: [ stats
 				addFirst:
 					(RBMessageNode
 						receiver: (RBLiteralValueNode value: #JCollecteur)
 						selector: #define:node:
 						arguments:
-							{(RBLiteralValueNode value: (tps2 collect: [ :a | a name ]) asArray printString).
+							{(RBLiteralValueNode
+								value: (tps2 collect: [ :a | a name ]) asArray printString).
 							(RBLiteralValueNode value: nodeId)}) ].
 	aNode statements: stats.
 	aNode temporaries: tps2.

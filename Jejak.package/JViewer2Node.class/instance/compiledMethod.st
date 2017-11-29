@@ -1,11 +1,11 @@
 accessing
 compiledMethod
-	| a |
-	item isMethod
-		ifFalse: [ ^ nil ].
-	a := item mclass lookupSelector: item selector.
+	| a mclass mselector |
+	mclass := self methodClass.
+	mselector := self methodSelector.
+	a := mclass lookupSelector: mselector.
 	a isNil
 		ifTrue: [ ^ nil ].
 	^ JInstrumentedMethods
-		at: (Array with: a methodClass with: item selector)
+		at: (Array with: a methodClass with: mselector)
 		ifAbsent: [ a ]

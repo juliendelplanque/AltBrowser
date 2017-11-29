@@ -1,3 +1,5 @@
 accessing
 styleClass
-	^ self compiledMethod methodClass
+	^ item isMethod
+		ifTrue: [ item mclass ]
+		ifFalse: [ parent ifNil: [  ] ifNotNil: [ parent styleClass ] ]

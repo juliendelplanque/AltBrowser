@@ -6,19 +6,18 @@ visitMessageNode: aNode
 	nodeId := no.
 	receiver := self visitNode: aNode receiver.
 	arguments := aNode arguments collect: [ :e | self visitNode: e ].
-	^ (aNode selector == #at:put: and: [ receiver isKindOf: RBVariableNode ])
-		ifTrue: [ 
-			RBMessageNode
+	^ (aNode selector == #at:put:
+		and: [ receiver isKindOf: RBVariableNode ])
+		ifTrue: [ RBMessageNode
 				receiver: (RBLiteralValueNode value: #JCollecteur)
 				selector: #assign:to:named:at:node:
 				arguments:
-					{(arguments last).
+					{arguments last.
 					receiver.
 					(RBLiteralValueNode value: receiver name).
-					(arguments first).
+					arguments first.
 					(RBLiteralValueNode value: nodeId)} ]
-		ifFalse: [ 
-			RBMessageNode
+		ifFalse: [ RBMessageNode
 				receiver: (RBLiteralValueNode value: #JCollecteur)
 				selector: #record:node:value:
 				arguments:
