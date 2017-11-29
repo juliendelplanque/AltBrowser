@@ -6,6 +6,8 @@ updateSelection
 	modelSelection := self selectedItem.
 	self extensions do: [ :e | e delete ].
 	extensions := nil.
+	self updateTextKeymap.
+	self updateStackKeymap.
 	modelSelection isNil
 		ifTrue: [ textMorph ifNotNil: [ :t | t classOrMetaClass: nil ] ]
 		ifFalse: [ textMorph

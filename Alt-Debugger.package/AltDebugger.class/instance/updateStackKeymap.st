@@ -1,6 +1,6 @@
 shortcuts
 updateStackKeymap
-	"Update the tree keymap."
+	"Update the stack keymap."
 
 	"Don't forget to update the tree."
 
