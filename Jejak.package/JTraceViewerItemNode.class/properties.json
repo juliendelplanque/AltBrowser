@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "JMLAbstractProbesWriter",
-	"category" : "Jejak-MetaLinks",
+	"super" : "AltTreeItemModel",
+	"category" : "Jejak-GUI",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "JMLVariablesProbesWriter",
+	"name" : "JTraceViewerItemNode",
 	"type" : "normal"
 }
