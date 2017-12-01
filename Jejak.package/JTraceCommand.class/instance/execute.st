@@ -1,17 +1,21 @@
 execution
 execute
-	| aCompiledMethod aKey |
+	| aCompiledMethod methodClass methodSelector |
 	aCompiledMethod := requestor selectedNode item compiledMethod.
+	methodClass := aCompiledMethod methodClass name.
+	methodSelector := aCompiledMethod selector.
 	(JInstrumentedMethods
-		includesKey:
-			(aKey := Array
-				with: aCompiledMethod methodClass name
-				with: aCompiledMethod selector))
+		includesClass: methodClass
+		andSelector: methodSelector)
 		ifTrue: [ | additions |
 			additions := OrderedCollection new.
-			(JInstrumentedMethods at: aKey) addMethodAdditionTo: additions.
+			(JInstrumentedMethods
+				atClass: methodClass
+				andSelector: methodSelector) addMethodAdditionTo: additions.
 			additions do: [ :each | each installMethod ].
 			additions do: [ :each | each notifyObservers ].
-			JInstrumentedMethods array removeKey: aKey.
-			AltMethodNode removeMethodAt: aKey first and: aKey second ]
+			JInstrumentedMethods array
+				removeClass: methodClass
+				andSelector: methodSelector.
+			AltMethodNode removeMethodAt: methodClass and: methodSelector ]
 		ifFalse: [ JVariableProbesWriter analyse: aCompiledMethod ]

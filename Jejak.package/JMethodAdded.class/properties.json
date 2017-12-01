@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "JAbstractMethodAnnouncement",
+	"category" : "Jejak-Store",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "JMethodAdded",
+	"type" : "normal"
+}

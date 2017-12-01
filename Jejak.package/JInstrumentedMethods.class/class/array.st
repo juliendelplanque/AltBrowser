@@ -1,4 +1,3 @@
-class variables
+private
 array
-	array isNil ifTrue: [array := Dictionary new].
-	^ array
+	^ array ifNil: [ array := Dictionary new ]

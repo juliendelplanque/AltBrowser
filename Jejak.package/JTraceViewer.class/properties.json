@@ -11,7 +11,8 @@
 		"window",
 		"source",
 		"tree",
-		"textMorph"
+		"textMorph",
+		"removeProbesButton"
 	],
 	"name" : "JTraceViewer",
 	"type" : "normal"

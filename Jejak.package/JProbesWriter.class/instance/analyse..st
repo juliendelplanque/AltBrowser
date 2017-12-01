@@ -9,7 +9,8 @@ analyse: aCompiledMethod
 	aClass isNil
 		ifTrue: [ ^ self ].
 	(JInstrumentedMethods
-		includesKey: (Array with: aClass name with: aCompiledMethod selector))
+		includesClass: aClass name
+		andSelector: aCompiledMethod selector)
 		ifTrue: [ ExampleBuilderMorph new alert: 'Method already instrumented.'.
 			^ self ].
 	mclass := aClass.
@@ -26,5 +27,6 @@ analyse: aCompiledMethod
 				to: JCollecteur recorder
 				in: aTracedCompiledMethod.
 			JInstrumentedMethods
-				at: (Array with: aClass name with: aCompiledMethod selector)
+				atClass: aClass name
+				andSelector: aCompiledMethod selector
 				put: aMCMethodDefinition ]

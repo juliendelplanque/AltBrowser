@@ -1,7 +1,0 @@
-class variables
-at: aKey put: aValue
-	self array at: aKey put: aValue.
-	AltMethodNode
-		at: aKey first
-		and: aKey second
-		putMethod: aValue source

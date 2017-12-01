@@ -7,5 +7,6 @@ compiledMethod
 	a isNil
 		ifTrue: [ ^ nil ].
 	^ JInstrumentedMethods
-		at: (Array with: a methodClass with: mselector)
+		atClass: a methodClass
+		andSelector: mselector
 		ifAbsent: [ a ]
