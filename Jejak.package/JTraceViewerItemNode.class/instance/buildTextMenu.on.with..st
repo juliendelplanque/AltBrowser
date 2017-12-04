@@ -14,7 +14,10 @@ buildTextMenu: aMenu on: aTarget with: aRequestor
 				collect: [ :c | c asClassInEnvironment: Smalltalk globals ifAbsent: [  ] ])
 				reject: [ :c | c isNil ])
 				do: [ :c | (c on: aTarget for: aRequestor) addItemToMenu: aMenu ] ].
-	ast := item method ast.
+	ast := RBParser
+		parseMethod: aTarget text asString
+		onError: [ :msg :pos | ^ self ].
+	ast doSemanticAnalysisIn: self methodClass.
 	(node := ast bestNodeFor: aTarget selectionInterval) notNil
 		ifFalse: [ ^ self ].
 	aMenu
