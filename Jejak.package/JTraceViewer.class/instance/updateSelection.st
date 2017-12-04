@@ -12,7 +12,7 @@ updateSelection
 			self source aboutToStyle: true.
 			self source contents: modelSelection sourceCode.
 			modelSelection astNode
-				in: [ :n | 
+				ifNotNil: [ :n | 
 					textMorph
 						ifNotNil: [ :t | 
 							t selectFrom: n sourceInterval first to: n sourceInterval last.

@@ -3,5 +3,4 @@ buildStackShortcutsOn: aKMDispatcher with: aRequestor
 	"This is an attempt at handling shortcuts..."
 
 	self selectedItem
-		buildStackShortcutsOn: aKMDispatcher
-		with: aRequestor
+		ifNotNil: [ :s | s buildStackShortcutsOn: aKMDispatcher with: aRequestor ]

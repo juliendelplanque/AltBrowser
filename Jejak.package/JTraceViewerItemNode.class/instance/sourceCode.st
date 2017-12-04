@@ -2,7 +2,8 @@ accessing
 sourceCode
 	^ item isMethod
 		ifTrue: [ self compiledMethod
-				in: [ :m | 
+				ifNil: [ 'Source code not found' ]
+				ifNotNil: [ :m | 
 					AltMethodNode protectedMethods
 						at: (Array with: m methodClass name with: m selector)
 						ifAbsent: [ m sourceCode ] ] ]
