@@ -1,3 +1,3 @@
-events-registering
+events recording
 enter: aNid
 	^ recorder enter: aNid

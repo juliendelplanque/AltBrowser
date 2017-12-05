@@ -1,4 +1,4 @@
-events-registering
+events recording
 exit: aValue node: aNodeId
 	"Exit a block, returning a value. aNodeId is the id of the block node."
 	

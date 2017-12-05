@@ -5,9 +5,9 @@ displayTraceCArleast5
 	"JTests displayTraceCArleast5"
 
 	<example>
-	JCollecteur recorder: JRecorder new.
+	[ JCollecteur reset.
 	#(#rleast: #reorder: #least:array2:)
 		do: [ :e | JVariableProbesWriter analyse: JExampleArray >> e ].
-	self testCArleast5.
-	JTraceViewer open.
-	JProbesWriter uninstall
+	self testCArleast5 ]
+		ensure: [ JProbesWriter uninstall ].
+	JTraceViewer open
