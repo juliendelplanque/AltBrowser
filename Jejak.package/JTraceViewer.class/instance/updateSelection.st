@@ -4,6 +4,8 @@ updateSelection
 
 	| modelSelection |
 	modelSelection := self selectedNode.
+	self updateTreeKeymap.
+	self updateTextKeymap.
 	modelSelection isNil
 		ifTrue: [ self source contents: ''.
 			textMorph ifNotNil: [ :t | t classOrMetaClass: nil ] ]

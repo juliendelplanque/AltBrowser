@@ -5,4 +5,4 @@ buildTextShortcutsOn: aKMDispatcher with: aRequestor
 	self selectedItem notNil
 		ifTrue: [ self selectedItem
 				buildTextShortcutsOn: aKMDispatcher
-				with: aRequestor ]
+				for: aRequestor ]
