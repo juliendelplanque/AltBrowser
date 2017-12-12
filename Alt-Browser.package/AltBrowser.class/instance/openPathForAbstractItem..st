@@ -9,10 +9,11 @@ openPathForAbstractItem: anItem
 		whileTrue: [ nPath addFirst: aNode.
 			aNode := aNode parent ].
 	anItemModel := self root.
+	nPath isEmpty
+		ifTrue: [ ^ self ].
 	nPath removeFirst.
 	[ nPath notEmpty ]
-		whileTrue:
-			[ | next |
+		whileTrue: [ | next |
 			next := nPath removeFirst.
 			anItemModel := anItemModel contents
 				detect: [ :i | i item == next ]

@@ -14,7 +14,7 @@ execute
 				andSelector: methodSelector) addMethodAdditionTo: additions.
 			additions do: [ :each | each installMethod ].
 			additions do: [ :each | each notifyObservers ].
-			JInstrumentedMethods array
+			JInstrumentedMethods
 				removeClass: methodClass
 				andSelector: methodSelector.
 			AltMethodNode removeMethodAt: methodClass and: methodSelector ]

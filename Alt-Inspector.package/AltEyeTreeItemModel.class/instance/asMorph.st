@@ -1,3 +1,3 @@
 user interface
 asMorph
-	^ self label asStringMorph
+	^ (self label truncateWithElipsisTo: 1000) asStringMorph
