@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltItemInspector",
+	"category" : "Alt-Inspector-Inspectors",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcements"
+	],
+	"name" : "AltAnnouncerInspector",
+	"type" : "normal"
+}

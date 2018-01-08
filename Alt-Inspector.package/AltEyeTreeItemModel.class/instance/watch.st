@@ -10,8 +10,10 @@ watch
 						ifTrue: [ true ]
 						ifFalse: [ s ] ])
 				ifTrue: [ ^ self changed ] ].
-	item value == copy
-		ifFalse: [ copy := item value.
+	item isNil
+		ifTrue: [ ^ copy notNil ].
+	(item valueIsSameAs: copy)
+		ifFalse: [ copy := item recordedValue.
 			contents := nil.
 			^ true ].
 	^ self contents

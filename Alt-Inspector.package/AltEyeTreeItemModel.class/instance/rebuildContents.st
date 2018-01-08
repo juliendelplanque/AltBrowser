@@ -11,4 +11,8 @@ rebuildContents
 					oldContents
 						detect: [ :oc | oc item = ci ]
 						ifNone: [ self childNodeFromItem: ci ] ]).
+	oldContents
+		do: [ :each | 
+			(contents includes: each)
+				ifFalse: [ each release ] ].
 	self changed
