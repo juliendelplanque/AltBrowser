@@ -1,0 +1,3 @@
+comparing
+recordedItem
+	^ object copy

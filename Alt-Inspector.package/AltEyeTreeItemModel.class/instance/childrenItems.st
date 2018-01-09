@@ -1,3 +1,3 @@
 accessing
 childrenItems
-	^ (AltItemInspector inspector: item value) elements
+	^ self inspector elements
