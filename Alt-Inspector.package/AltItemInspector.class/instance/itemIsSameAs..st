@@ -1,3 +1,3 @@
 comparing
 itemIsSameAs: aValue
-	^ object = aValue
+	^ object == aValue

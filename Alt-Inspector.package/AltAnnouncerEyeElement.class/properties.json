@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "AltAbstractEyeElement",
+	"category" : "Alt-Inspector-Element",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcements"
+	],
+	"name" : "AltAnnouncerEyeElement",
+	"type" : "normal"
+}

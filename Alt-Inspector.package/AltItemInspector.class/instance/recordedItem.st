@@ -1,3 +1,5 @@
 comparing
 recordedItem
-	^ object copy
+	^ object isImmediate
+		ifTrue: [ object copy ]
+		ifFalse: [ object ]
