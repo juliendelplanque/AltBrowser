@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "AltThisContextEyeElement",
+	"name" : "AltContextEyeElement",
 	"type" : "normal"
 }
