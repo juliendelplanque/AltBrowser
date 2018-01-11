@@ -24,5 +24,5 @@ updateSelection
 						ifNotNil: [ :t | 
 							t selectFrom: s first to: s last.
 							t scrollSelectionIntoView ] ].
-			self inspector object item: modelSelection item.
+			self inspector object item host: modelSelection item.
 			self inspector object rebuildContents ]
