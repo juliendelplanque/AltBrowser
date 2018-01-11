@@ -1,4 +1,4 @@
 initialize-release
 release
-	host unsubscribe: self announcements.
+	announcements ifNotNil: [ host unsubscribe: announcements ].
 	super release
