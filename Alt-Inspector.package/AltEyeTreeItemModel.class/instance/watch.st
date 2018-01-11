@@ -12,7 +12,7 @@ watch
 		ifTrue: [ ^ copy notNil ].
 	(self inspector itemIsSameAs: copy)
 		ifFalse: [ copy := self inspector recordedItem.
-			contents := nil.
+			self rebuildContents.
 			^ true ].
 	self contents
 		do: [ :e | 

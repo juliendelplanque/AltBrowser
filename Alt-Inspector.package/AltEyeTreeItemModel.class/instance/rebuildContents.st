@@ -3,6 +3,7 @@ rebuildContents
 	"Rebuild the contents, considering our item has changed, but try not to recreate everything."
 
 	| oldContents |
+	contents ifNil: [ ^ self ].
 	oldContents := contents.
 	self
 		contents:
