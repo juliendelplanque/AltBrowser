@@ -10,3 +10,7 @@ Ok, to recover the GTInspector presentations:
 - get the entry from the title (get rid of the Raw and Meta presentations)
 - ask for the morph of each presentation
 Don't process the pragmas requiring a GTInspector instance as a context.
+
+Issues:
+- scrolling doesn't work very well with large items among small ones (and GT views are large, on average)
+- GTViews, text views in particular, can be very slow to build on large items
