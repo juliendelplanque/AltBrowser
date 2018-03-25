@@ -1,0 +1,2 @@
+AltBrowser initialize.
+AltMessageList initialize.

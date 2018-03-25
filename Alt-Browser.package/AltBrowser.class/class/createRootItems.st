@@ -2,7 +2,8 @@ private
 createRootItems
 	"Build the organisation out of some classification and collect all remaining packages from the list of MCWorkingCopy in the system."
 
-	| convertBlock allBandC |
+	| convertBlock allBandC packages step current |
+	packages := MCWorkingCopy allManagers.
 	convertBlock := [ :entry | 
 	entry isArray
 		ifFalse: [ entry -> OrderedCollection new ]
@@ -17,18 +18,25 @@ createRootItems
 					((self categories collect: [ :e | convertBlock value: e ])
 						, {RPackage defaultPackageName}) asOrderedCollection.
 	allBandC := self allBaselinesAndConfigurations.
-	allBandC
-		do: [ :e | 
-			self
-				aMCWorkingCopyCreated:
-					(MCWorkingCopyCreated
-						workingCopy: e
-						package: (MCPackage named: e packageName)) ].
-	(MCWorkingCopy allManagers copyWithoutAll: allBandC)
-		do: [ :e | 
-			self
-				aMCWorkingCopyCreated:
-					(MCWorkingCopyCreated
-						workingCopy: e
-						package: (MCPackage named: e packageName)) ].
-	self aRecentPackagesReset
+	step := 100 / packages size.
+	UIManager default
+		informUserDuring: [ :bar | 
+			bar label: 'Scanning packages'.
+			bar current: 0.
+			allBandC
+				do: [ :e | 
+					bar current: bar current + step.
+					self
+						aMCWorkingCopyCreated:
+							(MCWorkingCopyCreated
+								workingCopy: e
+								package: (MCPackage named: e packageName)) ].
+			(packages copyWithoutAll: allBandC)
+				do: [ :e | 
+					bar current: bar current + step.
+					self
+						aMCWorkingCopyCreated:
+							(MCWorkingCopyCreated
+								workingCopy: e
+								package: (MCPackage named: e packageName)) ].
+			self aRecentPackagesReset ]
