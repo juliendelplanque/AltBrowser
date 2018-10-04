@@ -13,4 +13,5 @@ baseline: spec
 				package: 'Alt-Debugger' with: [ spec requires: 'Alt-Browser' ];
 				group: 'default'
 					with:
-					#('Alt-Browser' 'Alt-Inspector' 'Jejak' 'Alt-TypeCheck' 'Alt-Debugger') ]
+					#('Alt-Browser' 'Alt-Inspector' 'Jejak' 'Alt-TypeCheck' 'Alt-Debugger');
+				group: 'browser-only' with: #('Alt-Browser') ]
