@@ -2,7 +2,7 @@ view
 textMorph
 	^ textMorph
 		ifNil: [ PluggableTextMorph stylingClass isNil
-				ifTrue: [ PluggableTextMorph stylingClass: SHTextStylerST80 ].
+				ifTrue: [ PluggableTextMorph stylingClass: SHRBTextStyler ].
 			textMorph := (AltPluggableTextMorph
 				on: self source
 				text: #contents
